@@ -1,9 +1,7 @@
-@echo off
-cls
 
 .paket\paket.exe restore
-if errorlevel 1 (
-  exit /b %errorlevel%
-)
+REM if errorlevel 1 (
+REM   exit /b %errorlevel%
+REM )
 
-packages\build\FAKE\tools\FAKE.exe build.fsx %*
+REM REM packages\build\FAKE\tools\FAKE.exe build.fsx %*
