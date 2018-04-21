@@ -20,6 +20,10 @@
 //   Array.zip pixels1 pixels2
 //   |> Array.sumBy (fun (x,y) -> abs (x-y))
   
+// let euclidianDistance (pixels1, pixels2) =
+//   Array.zip pixels1 pixels2
+//   |> Array.sumBy (fun (x,y) -> pown (x - y) 2)
+  
 
 // // type Distance = int[] * int[] -> int
 // let train (trainingSet:Observation[]) dist =
@@ -37,15 +41,13 @@
 //   data 
 //   |> Array.averageBy (fun x -> if classifier x.Pixels = x.Label then 1. else 0. )
 
-
 // let validationData = reader validationPath
 
 // let getCost classifier =
 //   evaluate validationData  classifier |> (*) 100. 
 
-// getCost euclidianClassifier |> printfn "%.2f"
-// getCost manhattanClassifier |> printfn "%.2f"
-
+// getCost euclidianClassifier |> printfn "euclidian: %.2f"
+// getCost manhattanClassifier |> printfn "manhattan: %.2f"
 
 // let img1 = trainingData.[0].Pixels
 // let img2 = trainingData.[1].Pixels
